@@ -45,7 +45,7 @@
 		_gel = function(el) { return jsPlumb.CurrentLibrary.getElementObject(el); },
 		_getOffset = function(el, _instance) {
             var o = jsPlumb.CurrentLibrary.getOffset(_gel(el));
-			if (_instance != null) {
+			if (_instance != null && o !== null) {
                 var z = _instance.getZoom();
                 return {left:o.left / z, top:o.top / z };    
             }
